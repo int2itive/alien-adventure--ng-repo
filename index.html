@@ -1,0 +1,235 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Alien Adventures - Clean Version</title>
+        <!--<link href="css/main.css" rel="stylesheet" type="text/css">-->
+        <link href="css/mediaquery.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    <style>
+    /* This menu is built from mobile up */
+     Comic Sans MS, cursive,
+    /* general page styling */
+    body {  
+        background-color: black;
+        background: url('https://ik.imagekit.io/ghow2otb3rc/Projects/SoM/cdn/96337246-f14d4580-1085-11eb-8793-a86d929e034d_xLVdBIAQK.jpg');
+        font-family:  Comic Sans MS, cursive, sans-serif; font-size: 1.125em;
+        line-height: 0.3em;
+    }
+        
+    #sidebar {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        top: 50px;
+        /*right: 40px;*/
+        color: #c0c0c0;
+    }
+    audio {
+        position: absolute;
+        right: 10px;
+        width: 260px;
+        height: 30px;
+        right: 0;
+        /*transform: scale(-0.75, -1);*/
+       
+        transform: scale(0.5, 1);  Equal to scaleX(2) scaleY(0.5) 
+        transform-origin: left;
+        transition: transform 0.5s ease-in-out
+    }
+        
+    audio:hover {
+        transform: scale(0.75, 1);  Equal to scaleX(2) scaleY(0.5)    
+    }
+        
+    #sidebar h4 {
+        width: 40ch;
+    }
+    #leftnavcol {
+        width: 20%; 
+        float: left;
+        border-right: 2px dashed #999999;
+        margin-right: 1.0em;
+        height: 1390px;
+    }
+    .header { 
+        width:100%;
+        border-bottom: 1px solid #ccc;
+        background-color: #ccc;
+        margin-bottom: 2em; 
+    }
+    .footer {
+        font-size: 1.1em;
+        padding: 0px;
+    }
+    #content { width: auto; max-width: 990px; margin: auto; padding: 20px; }
+
+    /* Menu styles for non-mobile version */
+    .nav ul { display: none; list-style: none; padding: 0px; margin: 0px; font-weight: bold; text-align: center; }
+    .nav ul li {
+        display: inline-block;
+        text-align: left;
+        font-family: "Comic Sans MS", cursive;
+        font-size: 20px;
+        padding-left: 10px;
+
+    }
+    .nav ul li a { display: block; padding: 15px 10px; text-decoration: none; color: #fff; }
+    .nav ul li a:hover {
+        background-color: blue;
+        font-family: "Comic Sans MS", cursive;
+        font-size: 24px;
+    }
+
+    /* rule for button on mobile version */
+    .anchor-link { 
+        display: inline-block; 
+        text-align: center; 
+        padding: 10px 15px; 
+        color: #fff;
+        background-color: #00F;
+        text-decoration: none;
+        margin: 2px; float: right;
+        display: none
+    }
+
+    /* Styles for menu in footer */
+    #mobile-nav { display: block; }
+    #mobile-nav ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+    #mobile-nav ul li { list-style: none; text-align: center; }
+    #mobile-nav ul li a { display: block; padding: 20px 10px; border-bottom: 2px solid ; text-decoration: none;color: #fff; }
+    #mobile-nav ul li a:hover { background-color: blue; color: #fff; }
+
+    /* The media query for larger devices */
+    @media all and (min-width:768px)
+    {
+    /* for display of non-mobile menu */
+    .nav ul { display: block; padding-left: 0px; }
+    /* hides menu button at top of screen */
+    .anchor-link { display: none; }
+    /* hides menu in footer */
+    #mobile-nav { display: none; }
+
+
+    }
+    </style>
+    </head>
+
+    <body>
+        <div id="wrapper">
+          <div id="header">
+                <div class="hamburger">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+              
+              <a class="anchor-link" href="#mobile-nav">Menu</a>
+               <div id="topnav">
+                 <nav class="nav"> 
+                    <ul>
+                        <li>
+                            <a href="jakes2.html">Start</a>        
+                        </li>
+                        <li>
+                            <a href="games.html">Games</a>       
+                        </li>
+                        <li>
+                            <a href="act.html">Activites</a>        
+                        </li>
+                        <li>
+                            <a href="http://www.jakesalienadventures.com/admin/?page_id=27">Products</a>
+                        </li>
+                        <li>
+                            <a href="http://www.jakesalienadventures.com/admin/?page_id=74">Blog</a>
+                        </li>
+                        <li>
+                            <a href="http://www.jakesalienadventures.com/admin/contact-us/">Contact</a>        
+                        </li>                    
+                    </ul>
+              </nav>		
+            </div>
+          </div>
+          <div id="nav">
+            <!-- Change container element type to div -->
+            <div class="img--cont"> 
+                <img class="jake6"  src="http://netanimations.net/stars_33.gif" width="100&quot;" height="100" alt="jake"/>
+            </div>
+          </div>
+          <!--
+          <div id="main">
+                <img class="page3"  src="http://www.jakesalienadventures.com/n.jpg" width="320" height="489" alt="jake"/>
+                <img class="p5" src="http://www.jakesalienadventures.com/p5.jpg" width="320" height="489" alt="jake"/>
+          </div>
+          -->
+            <main>
+            <div class="img--cont">
+              <img src="http://www.jakesalienadventures.com/n.jpg" alt="">
+            </div>
+            <div class="img--cont">
+              <img src="http://www.jakesalienadventures.com/p5.jpg" alt="">
+            </div>
+            <div class="nav--buttons">
+              <div class="nav-btn--wrap">
+                <a href="jakes2.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm5 11h-5v4l-5-5 5-5v4h5v2z"></path>
+                    </svg>
+                </a>
+              </div>
+              <div class="nav-btn--wrap">
+                <a href="jakes2.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 15v-4H7v-2h5V7l5 5-5 5z"></path>
+                    </svg>
+                </a>
+              </div>
+            </div>
+            </main>
+            
+            <div id="sidebar">
+                <audio controls autoplay class="tooltip" data-tooltip="If you cannot hear the sound, your computer or browser doesn't support the sound format.Or, you have your speakers turned off">
+                    <source src="dan1.mp3" type="audio/mpeg">
+                    <source src="dan1.ogg" type="audio/ogg">
+                    <embed type="video/mpeg" height="50" width="10" src="dan1.mpeg" title="Narration">
+                </audio>
+                <h4>If you cannot hear the sound, your computer or browser doesn't support the sound format.Or, you have your speakers turned off</h4>
+            </div>
+
+      <div id="footer">
+
+        <footer class="footer">
+
+            <nav id="mobile-nav"> 
+                <ul>
+                    <li>
+                        <a href="jakes2.html">Start</a>
+                    </li>
+                    <li>
+                        <a href="jake5.html">Nextpage</a>
+                    </li>
+                    <li>
+                        <a href="http://www.jakesalienadventures.com">Back</a>
+                    </li>
+                    <li>
+                        <a href="games.html">Games</a>
+                    </li>
+                    <li>
+                        <a href="act.html">Activites</a>
+                    </li>
+                    <li>
+                        <a href="http://www.jakesalienadventures.com/admin/?page_id=27">Products</a>
+                    </li>
+                    <li>
+                        <a href="http://www.jakesalienadventures.com/admin/?page_id=74">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+            
