@@ -47,6 +47,13 @@
         transform: scale(0.75, 1);  Equal to scaleX(2) scaleY(0.5)    
     }
         
+        video {
+            max-width: 100%;
+            width: 500px;
+            aspect-ratio: 16 / 9;
+            height: auto;
+        }
+        
     #sidebar h4 {
         width: 40ch;
     }
@@ -115,7 +122,7 @@
         inset: 0;
         height: 100%;
         width: 100%;
-        background-color: rgba(0, 0, 0, .8);
+        background-color: rgba(0, 0, 0, .85);
         transform: translate3d(100%, 0, 0);
         transition: transform 0.6s ease-in-out;
     }
@@ -247,7 +254,13 @@
               </div>
             </div>
             </main>
-            
+            <div class="media-container">
+            <video controls>
+<source src="http://www.jakesalienadventures.com/bu.mp4" type="video/mp4">
+<source src="bu.ogv.ogg" type='video/ogg; codecs="theora,vorbis"'>
+<br><br><br><br>
+            </video>            
+            </div>
             <div id="sidebar">
                 <!--
                 <audio controls autoplay class="tooltip" data-tooltip="If you cannot hear the sound, your computer or browser doesn't support the sound format.Or, you have your speakers turned off">
