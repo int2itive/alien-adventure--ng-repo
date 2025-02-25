@@ -144,7 +144,21 @@
         /* background-color: blue; */
         color: cyan; 
     }
-
+    .copyright {
+        position: fixed;
+        bottom: 0;
+        display: inline-flex;
+        font-family: 'Geo';
+        font-size: 1rem;
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+        .copyright img {
+            order: -1;
+        }
     /* The media query for larger devices */
     @media all and (min-width:768px)
     {
@@ -267,6 +281,11 @@
                     </li>
                 </ul>
             </nav>
+                <span class="copyright">
+                    <img src="http://www.jakesalienadventures.com/images/fa.jpg" width="40" height="30" />
+                    &#169; Copyright: Jake's Alien adventures 2006-2024<a class="jake8" href="https://www.facebook.com/profile.php?id=100008844106645">
+                    </a> 
+                </span>
         </footer>
     </div>
     </body>
