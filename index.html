@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
     <head>
@@ -7,7 +6,9 @@
         <title>Alien Adventures - Clean Version</title>
         <!--<link href="css/main.css" rel="stylesheet" type="text/css">-->
         <link href="css/mediaquery.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://use.typekit.net/jww6zhp.css">
         <link rel="stylesheet" type="text/css" href="./style.css">
+        <script type="text/javascript" src="./app.js" defer></script>
     <style>
     /* This menu is built from mobile up */
      Comic Sans MS, cursive,
@@ -74,6 +75,7 @@
         display: inline-block;
         text-align: left;
         font-family: "Comic Sans MS", cursive;
+        color: firebrick;
         font-size: 20px;
         padding-left: 10px;
 
@@ -98,16 +100,50 @@
     }
 
     /* Styles for menu in footer */
-    #mobile-nav { display: block; }
+    #mobile-nav { 
+        position: fixed;
+        display: grid;
+        place-items: center;
+        /*
+        position: fixed;
+        inset: 10% 0 0 ;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .8);
+        transform: translate3d(-10%, 0, 0);
+        */
+        inset: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .8);
+        transform: translate3d(100%, 0, 0);
+        transition: transform 0.6s ease-in-out;
+    }
     #mobile-nav ul {
         list-style: none;
+        width: 80%;
         margin: 0px;
         padding: 0px;
         font-family: Helvetica, Arial, sans-serif;
     }
-    #mobile-nav ul li { list-style: none; text-align: center; }
-    #mobile-nav ul li a { display: block; padding: 20px 10px; border-bottom: 1px solid ; text-decoration: none;color: #fff; }
-    #mobile-nav ul li a:hover { background-color: blue; color: #fff; }
+    #mobile-nav ul li { 
+        list-style: none;
+        text-align: center;         
+        /*font-family: 'Geo';*/
+        text-transform: uppercase;
+    }
+    #mobile-nav ul li a {
+        display: block;
+        padding: 20px 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        text-decoration: none;
+        color: #fff; 
+        transition: color 0.6s ease-in-out;
+    }
+    #mobile-nav ul li a:hover { 
+        /* background-color: blue; */
+        color: cyan; 
+    }
 
     /* The media query for larger devices */
     @media all and (min-width:768px)
@@ -209,25 +245,25 @@
             <nav id="mobile-nav"> 
                 <ul>
                     <li>
-                        <a href="jakes2.html">Start</a>
+                        <a href="jakes2.html" class="middle">Start</a>
                     </li>
                     <li>
-                        <a href="jake5.html">Nextpage</a>
+                        <a href="jake5.html" class="middle">Nextpage</a>
                     </li>
                     <li>
-                        <a href="http://www.jakesalienadventures.com">Back</a>
+                        <a href="http://www.jakesalienadventures.com" class="middle">Back</a>
                     </li>
                     <li>
-                        <a href="games.html">Games</a>
+                        <a href="games.html" class="middle">Games</a>
                     </li>
                     <li>
-                        <a href="act.html">Activites</a>
+                        <a href="act.html" class="middle">Activites</a>
                     </li>
                     <li>
-                        <a href="http://www.jakesalienadventures.com/admin/?page_id=27">Products</a>
+                        <a href="http://www.jakesalienadventures.com/admin/?page_id=27" class="middle">Products</a>
                     </li>
                     <li>
-                        <a href="http://www.jakesalienadventures.com/admin/?page_id=74">Blog</a>
+                        <a href="http://www.jakesalienadventures.com/admin/?page_id=74" class="middle">Blog</a>
                     </li>
                 </ul>
             </nav>
