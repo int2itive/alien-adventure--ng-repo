@@ -31,11 +31,16 @@ main p {
 
 .img--cont {
   flex: 1 1 50%;
+  overflow: hidden;
 }
 
 .img--cont img {
   max-width: 100%;
   height: auto;
+}
+
+.img--cont img.img--scaled {
+  transform: scale(1.02) translate(0.15rem, 0.15rem);
 }
 
 main .nav--buttons {
@@ -59,6 +64,13 @@ main .nav--buttons {
 
 .nav-btn--wrap:hover svg {
   fill: rgba(255, 255, 255, 1);
+}
+.nav-btn--wrap svg.btn--dark {
+  fill: rgba(0, 0, 0, .6);  
+}
+
+.nav-btn--wrap:hover svg.btn--dark {
+  fill: rgba(0, 0, 0, 1);
 }
 
 .media-container {
