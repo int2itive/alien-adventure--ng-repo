@@ -124,10 +124,10 @@ main .nav--buttons {
 
 .tooltip::before {
   content: attr(data-tooltip);
-  width: 180px;
+  width: 280px;
   position: absolute;
   bottom: 20px;
-  left: 10px;
+  left: 350px;
   background-color: var(--tooltip-background);
   padding: 10px;
   font-family: 'Oswald', sans-serif;
@@ -144,7 +144,7 @@ main .nav--buttons {
   content: "";
   position: absolute;
   bottom: 15px;
-  left: 93px;
+  left: 193px;
   width: 0;
   height: 0;
   border-left: 7px solid transparent;
@@ -165,14 +165,14 @@ main .nav--buttons {
 .tooltip:hover::after {
   opacity: 1;
   visibility: visible;
-  bottom: 20px;
+  bottom: 120px;
   transition: opacity 0.2s var(--cubic), bottom 0.2s var(--cubic), visibility 0s 0s;
 }
 a.middle
 {
-    position: relative;
-    font-family: 'Geo';
-    font-size: 1.5rem;
+  position: relative;
+  font-family: 'Geo';
+  font-size: 1.5rem;
 }
 
 a.middle:before {
