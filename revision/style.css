@@ -117,7 +117,6 @@ main .nav--buttons {
   }
   */
 }
-
 .tooltip {
   position: relative;
 }
@@ -126,8 +125,9 @@ main .nav--buttons {
   content: attr(data-tooltip);
   width: 280px;
   position: absolute;
-  bottom: 20px;
-  left: 350px;
+  bottom: -40px;
+  left: 540px;
+  left: 32%;
   background-color: var(--tooltip-background);
   padding: 10px;
   font-family: 'Oswald', sans-serif;
@@ -143,8 +143,8 @@ main .nav--buttons {
 .tooltip::after {
   content: "";
   position: absolute;
-  bottom: 15px;
-  left: 193px;
+  bottom: 65px;
+  left: 303px;
   width: 0;
   height: 0;
   border-left: 7px solid transparent;
@@ -158,7 +158,7 @@ main .nav--buttons {
 .tooltip:hover::before {
   opacity: 1;
   visibility: visible;
-  bottom: 27px;
+  bottom: 10px;
   transition: opacity 0.2s var(--cubic), bottom 0.2s var(--cubic), visibility 0s 0s;
 }
     
@@ -195,4 +195,16 @@ a.middle:hover:before {
 
 #mobile-nav.showing {
     transform: translate3d(0, 0, 0);
+}
+
+.media--player {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 420px) {
+  .img--cont:has(img.jake6) {
+    visibility: hidden;
+  }
 }
