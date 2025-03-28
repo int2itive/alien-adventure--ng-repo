@@ -127,7 +127,7 @@ main .nav--buttons {
   position: absolute;
   bottom: -40px;
   left: 540px;
-  left: 32%;
+  left: 22%;
   background-color: var(--tooltip-background);
   padding: 10px;
   font-family: 'Oswald', sans-serif;
@@ -143,8 +143,8 @@ main .nav--buttons {
 .tooltip::after {
   content: "";
   position: absolute;
-  bottom: 65px;
-  left: 303px;
+  bottom: -20px;
+  left: 233px;
   width: 0;
   height: 0;
   border-left: 7px solid transparent;
@@ -152,20 +152,21 @@ main .nav--buttons {
   border-top: 7px solid var(--tooltip-background);
   opacity: 0;
   visibility: hidden;
+  transform: rotate(-180deg);
   transition: opacity 0.2s var(--cubic), bottom 0.2s var(--cubic), visibility 0s 0.4s;
 }
 
 .tooltip:hover::before {
   opacity: 1;
   visibility: visible;
-  bottom: 10px;
+  bottom: -80px;
   transition: opacity 0.2s var(--cubic), bottom 0.2s var(--cubic), visibility 0s 0s;
 }
     
 .tooltip:hover::after {
   opacity: 1;
   visibility: visible;
-  bottom: 120px;
+  bottom: -24px;
   transition: opacity 0.2s var(--cubic), bottom 0.2s var(--cubic), visibility 0s 0s;
 }
 a.middle
@@ -199,7 +200,8 @@ a.middle:hover:before {
 
 .media--player {
   position: relative;
-  width: 200px;
+  width: 260px;
+  /*height: 30px;*/
   margin: 0 auto;
 }
 
