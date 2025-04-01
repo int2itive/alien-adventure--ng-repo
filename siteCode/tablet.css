@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+body {
+   
+   	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 100%;
+	line-height: 1.5em;
+	margin:0;
+}
+#wrapper{
+	width: 96%;	
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0%;
+}
+
+#header{
+	width: auto;	
+	color: #FFF;
+	padding: 0;
+	padding-right: 200px;
+}
+#nav{
+	width: auto;
+	float: none;
+	/* [disabled]background-color: #999; */
+	padding-right: 20%;
+}
+#nav li{
+	margin-bottom: 10px;
+	}
+#main{
+	width: 71%;
+	float: left;
+	padding: 0%;
+	font-size: 0.875em;
+	line-height: 0;
+}
+
+audio {   
+    width:260px;
+    height: 50px;			
+}
+
+#main img{
+	width: 100%;
+	height: auto;
+	font-size: 0.175em;
+}
+
+#sidebar{
+	width: 23%;
+	float: left;
+	/* [disabled]background-color: #999; */
+	font-size: 0.75em;
+	line-height: 1.375em;
+	padding-left: 2%;
+}
+#sidebar img{
+	width: 100%;
+	height:auto;
+	}
+#footer{
+	width: auto;	
+	color: #000;
+	clear: both;
+	padding: 2%;
+}
+
+.copyright	{
+    float: left;
+    color:black;
+    padding-left:80px;
+    font: bold 1.09em Comic Sans MS, cursive, sans-serif;
+}
+
+.copyright	{
+    float: left;
+    color:white;
+    padding-left:6px;
+	font: bold 0.60em Comic Sans MS, cursive, sans-serif;
+}
+h6 	{
+     font: bold 1.0em Comic San MS, cursive, sans-serif;	
+     color: white;
+}
+			
+img.jake6	{
+    float: left;
+    margin-left: 0;	
+    Padding-top: 0;
+}
+	  
+a.current {
+    color:white;
+    background-color: blue;
+    padding: 0.9em;
+    margin-right: 0.9em;
+    display:block;
+}
+		   
+a:link {
+    color: white;
+    text-decoration: none; 
+}
+
+a:visited {
+  color:white;
+  text-decoration: none; 
+}
+
+a:hover      {
+    color:white;
+    font-family: "Times New Roman", Times, serif;
+}
