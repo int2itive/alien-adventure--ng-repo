@@ -1,0 +1,80 @@
+body {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 100%;
+	line-height: 0.5em;
+	margin:20;
+}
+#wrapper{
+	width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+}
+#header{
+	width: auto;
+	color: #FFF;
+	padding: 0;
+}
+#nav{
+	width: 90px;
+	float: left;
+   padding-left: 40px;
+    display: inline; 
+  
+}
+#main{
+	width: 690px;
+	float: left;
+	padding: 10px;
+}
+
+#sidebar{
+	width: 90px;
+	float: left;
+	/* [disabled]background-color: #999; */
+	font-size: 0.75em;
+	line-height: 1.375em;
+	padding-left: 0;
+}
+
+.copyright	{
+    float:left;
+    color:white;
+    padding-left:100px;
+	font: bold 0.80em Comic Sans MS, cursive, sans-serif;
+}
+
+.copyright2	{
+    float: left;
+    color:white;
+    padding-left:350px;
+    font: bold 0.80em Comic Sans MS, cursive, sans-serif;
+}
+
+#footer{
+	width: auto;
+	background-color:black;
+	clear: both;
+	padding: 0;
+	padding-bottom: 0;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+h4 	{
+
+     font: bold 1.0em Comic San MS, cursive, sans-serif;	
+     color: white;
+}
+
+img.jake6 {
+    float: right;
+    margin-left:5.0em;	
+    Padding-top: 0.5em;
+    Padding-right: 5.5em;
+}
+.jake8	{
+    float: left; 
+    margin-left:6.0em;	/* moves the facebook tab forward or to to the right*/
+    padding-top: 0;
+    padding-right: 1.5em;  /* controls the space between the copyright information and the facebook image */
+}
