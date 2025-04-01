@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/* desktop */
+@import url("desktop.css") only screen and (min-width:960px);
+/* tablet */
+@import url("tablet.css") only screen and (min-width:481px) and (max-width:959px);
+/* phone */
+@import url("phone.css") only screen and (max-width:480px);
