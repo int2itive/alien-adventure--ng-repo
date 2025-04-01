@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width">
+        <title>Responsive: desktop, tablet and mobile</title>
+        <!--<link href="css/main.css" rel="stylesheet" type="text/css">-->
+        <link rel="stylesheet" type="text/css" href="css/mediaquery.css">
+        <link rel="stylesheet" href="./style.css" />
+        <script src="script.js"></script>
+        <script type="text/javascript">
+            var sc_project=9646471; 
+            var sc_invisible=1; 
+            var sc_security="56e9dd8a"; 
+            var scJsHost = (("https:" == document.location.protocol) ?
+            "https://secure." : "http://www.");
+            document.write("<sc"+"ript type='text/javascript' src='" +
+            scJsHost+
+            "statcounter.com/counter/counter.js'></"+"script>");
+        </script>        
+        <style>
+        /* This menu is built from mobile up */
+         Comic Sans MS, cursive,
+        /* general page styling */
+        body {  background-color: black; font-family:  Comic Sans MS, cursive, sans-serif; font-size: 1.125em; line-height: 0.3em; }
+
+
+        .header { width:100%; border-bottom: 1px solid #ccc; background-color: #ccc; margin-bottom: 2em; }
+        .footer {
+            font-size: 1.1em;
+            padding: 0px;
+        }
+        @media (min-width:900px){
+            #header{
+                width:1140px !important;
+                margin-left:-100px !important;
+            }
+        }
+        #content { width: auto; max-width: 960px; margin: auto; padding: 20px; }
+
+        /* Menu styles for non-mobile version */
+        .nav ul { display: none; list-style: none; padding: 0px; margin: 0px; font-weight: bold; text-align: center; }
+        .nav ul li {
+            display: inline-block;
+            text-align: left;
+            font-family: "Comic Sans MS", cursive;
+            font-size: 24px;
+        }
+        .nav ul li a { display: block; padding: 15px 20px; text-decoration: none; color: #fff; }
+        .nav ul li a:hover {
+            background-color: blue;
+            font-family: "Comic Sans MS", cursive;
+            font-size: 24px;
+        }
+
+        /* rule for button on mobile version */
+        .anchor-link { display: inline-block; text-align: center; padding: 10px 15px; color: #fff; background-color: #00F; text-decoration: none; margin: 2px; float: right; }
+
+        /* Styles for menu in footer */
+        #mobile-nav { display: block; }
+        #mobile-nav ul {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        #mobile-nav ul li { list-style: none; text-align: center; }
+        #mobile-nav ul li a { display: block; padding: 20px 10px; border-bottom: 2px solid ; text-decoration: none;color: #fff; }
+        #mobile-nav ul li a:hover { background-color: blue; color: #fff; }
+
+        /* The media query for larger devices */
+        @media all and (min-width:768px)
+        {
+        /* for display of non-mobile menu */
+        .nav ul { display: block; }
+        /* hides menu button at top of screen */
+        .anchor-link { display: none; }
+        /* hides menu in footer */
+        #mobile-nav { display: none; }
+
+
+        }
+        </style>
+    </head>
+    <body>
+<a id="top"></a>
+<div id="wrapper">
+  <div id="header">
+ 
+
+  <a class="anchor-link" href="#mobile-nav">Menu</a>
+   <div id="topnav">
+        <nav class="nav">
+            <ul>
+			  <li>
+                <a href="jakes2.html">Start</a>
+		      </li>
+				<li>
+                    <a href="jakes2.html">Read</a>
+                </li>
+                <li>
+                <a href="jakes3.html">Activities</a>
+                 </li>
+                 <li>
+                <a href="games.html">Games</a>
+                </li>
+                <li>
+                <a href="http://www.jakesalienadventures.com/admin/products/">Products</a>
+                 </li>
+                 <li>
+                    <a href="http://www.jakesalienadventures.com/admin/blog/">Blog</a>
+                </li>				
+				 <li>
+					<a href="https://paypal.me/Justiceforchildren?country.x=GB&locale.x=en_GB">Donate</a>
+                </li>
+				<li>				   
+				     <a href=" https://www.jakesalienadventures.com/schoolvisit.html">School Visit</a>
+				</li>
+				<li>
+                <a href="http://www.jakesalienadventures.com/admin/contact-us/">Contact</a>
+				</li>
+              </ul>
+		</nav>		
+	</div>
+  </div>
+  <div id="nav">
+    <ul>
+      
+    </ul>
+  </div>
+  <div id="main">
+    
+    <p><img src="images/f.gif" width="85%" height="500" alt="book cover" /></p>
+       
+
+  </div>
+  <div id="sidebar">
+  </div>
+  <div id="footer">
+    <footer class="footer">
+        <nav id="mobile-nav"> 
+            <ul>			
+                <li>
+                    <a href="jakes2.html">Start</a>
+		        </li>
+				<li>
+                <a href="jakes2.html">Read</a>
+                </li>
+		        <li>
+                    <a href="jakes3.html">Activities</a>
+                </li>
+                <li>
+                    <a href="games.html">Games</a>
+                </li>
+                <li>
+                    <a href="http://www.jakesalienadventures.com/admin/?page_id=27">Products</a>
+                </li>
+                <li>
+                    <a href="http://www.jakesalienadventures.com/admin/?page_id=74">Blog</a>
+                </li>                                                           
+				<li>
+                    <a href="http://www.jakesalienadventures.com/admin/?page_id=48">Contact</a>
+                </li>
+                <li>
+               <a href="https://tottenham.london/people/tottenham-charter/charter-action/pupils-go-moon-and-back-after-school-club">School visit</a>
+               </li>                                                                                                                              
+               <li>			
+               <a href="https://paypal.me/Justiceforchildren?country.x=GB&locale.x=en_GB">Donate</a>
+                </li>                
+			</ul>
+        </nav>
+        <span class="copyright">
+            &#169; Copyright: Jake's Alien adventures 2008-2025 
+            <a class="jake8" href="https://www.facebook.com/profile.php?id=100008844106645">
+                <img src="images/fa.jpg" width="40" height="30" />
+            </a> 
+        </span>
+        <br>
+    </footer> 
+  </div>
+</div>        
+            <!--
+            <div class="video-container">
+                <a
+                    href="https://www.youtube.com/watch?feature=player_embedded&v=Jkg3nAZ6vF8"
+                    target="_blank"
+                    title="Phoenix YouTube Channel">
+                    <img
+                        src="images/youtube_video.png"
+                        alt="Phoenix Code on YouTube"
+                        title="Phoenix Code on YouTube"
+                        style="max-width: 320px" />
+                </a>
+                <svg class="play-button" viewBox="0 0 200 200" alt="Play video">
+                    <circle cx="100" cy="100" r="90" fill="#333" fill-opacity="0.6" />
+                    <polygon points="70, 55 70, 145 145, 100" fill="white" />
+                </svg>
+            </div>
+            -->
+    </body>
+</html>
