@@ -1,0 +1,7 @@
+body {
+    background: url(http://animations.fg-a.com/2_animated_background.gif);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
