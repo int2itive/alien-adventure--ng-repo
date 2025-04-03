@@ -1,7 +1,278 @@
-body {
-    background: url(http://animations.fg-a.com/2_animated_background.gif);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@import url('https://api.fonts.coollabs.io/css2?family=Geo&display=swap');
+
+:root {
+  --tooltip-background: #444850;
+  --gap: 50px;
+  --cubic: cubic-bezier(0.91, 0.08, 0.16, 0.76);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, 
+::before, 
+::after {
+  box-sizing: border-box;
+}
+/* general page styling */
+body {  
+    background-color: black; 
+    font-family:  Comic Sans MS, cursive, sans-serif; 
+    font-size: 1.125em; 
+    line-height: 0.3em; 
+}
+
+.header { 
+    width:100%; 
+    border-bottom: 1px solid #ccc; 
+    background-color: #ccc; 
+    margin-bottom: 2em; 
+}
+.footer {
+    font-size: 1.1em;
+    padding: 0;
+}
+/*
+@media (min-width:900px){
+    #header{
+        width:1140px !important;
+        margin-left:-100px !important;
+    }
+}
+*/
+#content { 
+    width: auto; 
+    max-width: 960px; 
+    margin: auto; 
+    padding: 20px; 
+}
+
+/* Menu styles for non-mobile version */
+#topnav nav {
+    position: relative;
+    padding-block: .675rem;
+   /*outline: 1px solid firebrick; */
+}
+
+#topnav nav ul {
+  /*display: flex;*/
+    display: none;
+  list-style: none;
+  justify-content: center;
+  gap: .5rem;
+/*   outline: 1px solid firebrick; */
+}
+
+#topnav nav ul li:nth-of-type(1) {
+  outline: 1px solid #fff;
+  border-radius: 4px;
+}
+
+#topnav nav ul li a {
+  display: inline-block;
+  font-family: 'Geo';
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 6px;
+  text-transform: uppercase;
+  letter-spacing: .045rem;
+    transition: color .3s ease-in-out;
+}
+#topnav .nav ul li a:hover {
+    /*background-color: blue;*/
+    /*font-family: "Comic Sans MS", cursive;*/
+    color: cyan; 
+    /*font-size: 24px;*/
+}
+
+#main {
+  position: relative;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+/* Styles for menu in footer */
+#mobile-nav { 
+    /*display: block; */
+  display: grid;
+  place-items: center;
+  /*
+  position: fixed;
+  inset: 10% 0 0 ;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  transform: translate3d(-10%, 0, 0);
+  */
+  position: fixed;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .85);
+  transform: translate3d(100%, 0, 0);
+  transition: transform 0.6s ease-in-out;            
+}
+#mobile-nav ul {
+    list-style: none;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+#mobile-nav ul li { 
+    list-style: none;
+    text-align: center;         
+    font-family: 'Geo';
+    text-transform: uppercase;
+}
+#mobile-nav ul li a {
+    display: block;
+    padding: 20px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    color: #fff; 
+    transition: color 0.6s ease-in-out;
+}
+#mobile-nav ul li a:hover { 
+    /* background-color: blue; */
+    color: cyan; 
+}
+
+/* The media query for larger devices */
+@media all and (min-width: 768px) {
+  /* for display of non-mobile menu */
+  #topnav .nav ul { 
+    display: flex; 
+  }
+  /* hides menu button at top of screen */
+  .anchor-link { 
+    display: none; 
+  }
+  /* hides menu in footer */
+  #mobile-nav { 
+    display: none; 
+  }
+}
+/*
+
+main:has(p) {
+  align-items: center;
+  justify-content: center;      
+}
+*/
+/*
+
+main p {
+    font-family: 'Geo';
+    font-size: clamp(0.975rem, -0.675rem + 5.333333vw, 1.5rem);
+    line-height: 1.2;
+    width: 70%;
+    color: #c0c0c0;
+    align-self: center;
+}
+*/
+
+.main--img-wrap {
+  width: 100%;
+  /*margin: 0 auto;*/
+  margin-block-start: 3rem;
+  overflow: hidden;
+  /*outline: 1px solid firebrick;*/
+  text-align: center;
+}
+
+.main--img-wrap img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 1px 6px 12px rgba(250, 250, 250, .55);
+}
+a.middle
+{
+    position: relative;
+    font-family: 'Geo';
+    font-size: 1.5rem;
+}
+
+a.middle:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.8s ease-in-out;
+}
+
+a.middle:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+#mobile-nav.showing {
+    transform: translate3d(0, 0, 0);
+}
+
+.hamburger {
+  position: absolute;
+  right: .25rem;
+  top: .6rem;
+  flex: 0 0 28px;
+  display: none;
+  cursor: pointer;
+/*   margin-left: auto; */
+  z-index: 1;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    float: right;
+    margin-right: .25rem;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+.mbl--book-cover {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 80px;
+  overflow: hidden;
+}
+
+.mbl--book-cover img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  opacity: .8;
 }
