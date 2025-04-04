@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Responsive: desktop, tablet and mobile</title>
+        <!--<link href="css/main.css" rel="stylesheet" type="text/css">-->
+        <link href="css/mediaquery.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <script src="./app.js" defer></script>
+        <style>
+        /* This menu is built from mobile up */
+         Comic Sans MS, cursive,
+        /* general page styling */
+        body {  background-color: black; font-family:  Comic Sans MS, cursive, sans-serif; font-size: 1.125em; line-height: 0.9em; }
+         audio {
+
+                    width:160px;
+                    height: 50px;
+
+
+                     }
+
+        .header { width:100%; border-bottom: 1px solid #ccc; background-color: #ccc; margin-bottom: 2em; }
+        .footer {
+            font-size: 1.1em;
+            padding: 0px;
+        }
+        #content { width: auto; max-width: 960px; margin: auto; padding: 20px; }
+
+        /* Menu styles for non-mobile version */
+        #topnav nav {
+            position: relative;
+            padding-block: .675rem;
+           /*outline: 1px solid firebrick; */
+        }            
+        /*.nav ul { display: none; list-style: none; padding: 0px; margin: 0px; font-weight: bold; text-align: center; }*/
+        #topnav nav ul {
+          /*display: flex;*/
+            display: none;
+          list-style: none;
+          justify-content: center;
+          gap: .5rem;
+        /*   outline: 1px solid firebrick; */
+        }            
+        /*
+        .nav ul li {
+            display: inline-block;
+            text-align: left;
+            font-family: "Comic Sans MS", cursive;
+            font-size: 20px;
+            padding-left: 10px;
+        }
+        */
+        #topnav nav ul {
+          /*display: flex;*/
+            display: none;
+          list-style: none;
+          justify-content: center;
+          gap: .5rem;
+        /*   outline: 1px solid firebrick; */
+        }            
+        /*.nav ul li a { display: block; padding: 15px 15px; text-decoration: none; color: #fff; }*/
+        #topnav nav ul li:nth-of-type(5) {
+          outline: 1px solid #fff;
+          border-radius: 4px;
+        }
+
+        #topnav nav ul li a {
+          display: inline-block;
+          font-family: 'Geo';
+          font-weight: 700;
+          color: #fff;
+          text-decoration: none;
+          padding: 12px 6px;
+          text-transform: uppercase;
+          letter-spacing: .045rem;
+          transition: color .3s ease-in-out;
+        }            
+        #topnav .nav ul li a:hover {
+            /*
+            background-color: blue;
+            font-family: "Comic Sans MS", cursive;
+            */
+            color: hsl(180, 100%, 50%); /* cyan */
+            /*font-size: 20px;*/
+        }
+
+        /* rule for button on mobile version */
+        .anchor-link { display: inline-block; text-align: center; padding: 10px 15px; color: #fff; background-color: #00F; text-decoration: none; margin: 2px; float: right; }
+
+        /* Styles for menu in footer */
+        /*#mobile-nav { display: block; }*/
+        #mobile-nav { 
+            /*display: block; */
+          display: grid;
+          place-items: center;
+          /*
+          position: fixed;
+          inset: 10% 0 0 ;
+          height: 100%;
+          width: 100%;
+          background-color: rgba(0, 0, 0, .8);
+          transform: translate3d(-10%, 0, 0);
+          */
+          position: fixed;
+          inset: 0;
+          height: 100%;
+          width: 100%;
+          background-color: rgba(0, 0, 0, .85);
+          transform: translate3d(100%, 0, 0);
+          transition: transform 0.6s ease-in-out;            
+        }            
+        #mobile-nav ul {
+            list-style: none;
+            width: 80%;
+            margin: 0;
+            padding: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        #mobile-nav ul li { 
+            list-style: none;
+            text-align: center;         
+            /*font-family: 'Geo';*/
+            text-transform: uppercase;
+        }
+            /*
+            #mobile-nav ul li a { display: block; padding: 20px 10px; border-bottom: 2px solid ; text-decoration: none;color: #fff; }
+        #mobile-nav ul li a:hover { background-color: blue; color: #fff; }
+        */
+        #mobile-nav ul li a {
+            display: block;
+            padding: 20px 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            font-family: 'Geo';
+            text-decoration: none;
+            color: #fff; 
+            transition: color 0.6s ease-in-out;
+        }
+        #mobile-nav ul li a:hover { 
+            /* background-color: blue; */
+            color: hsl(180, 100%, 50%); /* cyan */
+        }
+        /* The media query for larger devices */
+        @media all and (min-width: 768px) {
+          /* for display of non-mobile menu */
+          #topnav .nav ul { 
+            display: flex; 
+          }
+          /* hides menu button at top of screen */
+          .anchor-link { 
+            display: none; 
+          }
+          /* hides menu in footer */
+          #mobile-nav { 
+            display: none; 
+          }
+        }
+
+        img.jake 	{
+                    float: left;
+                    border: 1px solid blue;
+                    margin-left: 6.5em;	
+
+                    }
+
+        .copyrighte3	{
+                    float: left;
+                    border: 20px solid blue;
+                     margin-left: 7.0em;
+                /* movesthe text above the windoq*/
+
+                    }
+
+            .copyrighte4	{
+                    float: left;
+                   color:white;
+                   padding-bottom:20px;
+                     margin-left: 7.0em;
+                /* movesthe text above the windoq*/
+
+                    }					
+
+        a.current 	  {
+                    color:white;
+                    /*background-color: blue;*/
+                    padding: 0.4em;
+                   /*margin-right: 0.9em;*/
+                    display:block;
+                   }
+
+
+
+
+        a:link	     {
+                     color: white;
+                     text-decoration: none; 
+                     }
+
+
+
+        a:visited     {
+                      color:white;
+                      text-decoration: none; 
+                      }
+
+        a:hover      {
+                      color:white;
+                      font-family: "Comic Sans MS", cursive;
+                     }
+
+
+
+                     #nav2{
+            width: 160px;
+            float: left;
+           padding-left: 40px;
+
+            display: inline; 
+
+                   }
+
+
+        .page4	{
+                    float: left;
+
+                    margin-left: 9.0em;	
+
+                    }
+        }
+
+            @media only screen and (min-width: 960px) {
+                #wrapper {
+                    width: 950px;
+                }
+                .nav ul{
+                    padding-left:0px !important;
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+
+<a id="top"></a>
+<div id="wrapper">
+  <div id="header">
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+  <!--<a class="anchor-link" href="#mobile-nav">Menu</a>-->
+   <div id="topnav">
+   
+ <nav class="nav"> 
+   
+
+            <ul>
+				<li>
+              <a href="http://www.jakesalienadventures.com">Start</a>
+		      <li>
+                <a href="jake4.html">Read</a>
+			  <li>
+               
+                
+			  <li>
+			   <a href="games.html">Games</a>
+			  <li>
+                <a class="current" href="act3.html">Activites</a>
+              <li>
+			  	<li>
+                <a href="http://www.jakesalienadventures.com/admin/?page_id=74">Blog</a>
+              <li>
+          	<li>
+                <a href="http://www.jakesalienadventures.com/admin/?page_id=27">Products</a>
+	        <li>
+	            	<li>
+				   
+				     <a href=" https://www.jakesalienadventures.com/schoolvisit.html">School Visit</a>
+				</li>
+				<li>
+				<a href="http://www.jakesalienadventures.com/admin/contact-us/">Contact</a>
+			
+              </li>
+             
+            
+             
+        </ul>
+	  </nav>		
+	</div>
+
+    
+  </div>
+
+  <div id="nav2">
+    <ul>
+       <p><li><a class="current">Puzzle</a></li></p>
+	    <li><a href="act3.html">Colouring</a></li>
+  
+
+	
+    </ul>
+  </div>
+ <br><br>
+
+  <div id="main">
+   
+<div id="frame"> 
+<br>
+
+<br>
+<br>
+<br>
+<br>
+ <br>
+<script src="http://www.jigzone.com/zes?i=C415E2274B7&amp;m=E7250DE320.A540C5C&amp;z=5&amp;y=B7" type="text/javascript"></script><noscript><a href="http://www.jigzone.com/puzzles/C415E2274B7">bed Jigsaw Puzzle</a></noscript>
+<br>
+<br>   
+<br>
+<img class="page4" src="http://i.picasion.com/gl/68/1xj0.gif" />	
+<br>
+<br>   
+<br>
+<br>
+<script src="http://www.jigzone.com/zes?i=5615E2279E3&amp;m=E7250DE320.A540C5C&amp;z=5&amp;y=B7" type="text/javascript"></script><noscript><a href="http://www.jigzone.com/puzzles/5615E2279E3">rain Jigsaw Puzzle</a></noscript>
+<br>
+<br>   
+<br>
+
+<img class="page4" src="http://i.picasion.com/gl/68/1xj0.gif" /> 
+<br>
+<br>   
+<br>
+<br>  
+<br>
+<script src="http://www.jigzone.com/zes?i=5615E2279E3&amp;m=E7250DE320.A540C5C&amp;z=5&amp;y=B7" type="text/javascript"></script><noscript><a href="http://www.jigzone.com/puzzles/5615E2279E3">rain Jigsaw Puzzle</a></noscript>
+<br>
+<br>   
+
+<img class="page4" src="http://i.picasion.com/gl/68/1xj0.gif" />
+<br>
+<br>
+<br>
+<br>
+<script src="http://www.jigzone.com/zes?i=2115E227AFD&amp;m=E7250DE320.A540C5C&amp;z=0&amp;y=B7" type="text/javascript"></script><noscript><a href="http://www.jigzone.com/puzzles/2115E227AFD">woo Jigsaw Puzzle</a></noscript>
+<br>
+ <br>   
+<br>
+<br>
+
+	
+  </div>
+ </div>
+   
+
+
+
+		
+		
+
+  
+  </div>
+  <div id="footer">
+    
+    <footer class="footer">
+
+           <nav id="mobile-nav"> 
+             <ul>
+				<li>
+                 <a href="jake5.html" class="middle">Read</a>
+		       <li>
+                 <a href="jake4.html" class="middle">Back</a>
+			  <li>
+                 <a href="games.html" class="middle">Games</a>
+			  <li>
+                 <a href="act.html" class="middle">Activites</a>
+              <li>
+			 <li>
+                <a href="http://www.jakesalienadventures.com/admin/?page_id=74" class="middle">Blog</a>
+              <li>
+			<li>
+                <a href="http://www.jakesalienadventures.com/admin/?page_id=27" class="middle">Products</a>
+	        <li>
+				<a href="form.html" class="middle">Contact</a>
+              </li>
+			</ul>
+    </nav>
+    
+        <span class="copyright2">
+            &#169; Copyright: Jake's Alien adventures  
+            <a class="jake8" href="https://www.facebook.com/profile.php?id=100008844106645">
+                <img src="images/fa.jpg" width="40" height="30" />
+            </a>
+        </span>
+</footer> 
+
+
+
+  </div>
+
+
+</body>
+</html>
