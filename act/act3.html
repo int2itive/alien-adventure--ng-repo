@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Responsive: desktop, tablet and mobile</title>
+		<!--<link href="css/main.css" rel="stylesheet" type="text/css">-->
+		<!-- <link href="css/mediaquery.css" rel="stylesheet" type="text/css"> -->
+		<link rel="stylesheet" href="./style.css" />
+		<script src="./app.js" defer></script>
+
+		<!-- <body bgcolor="#000000" background="http://animations.fg-a.com/2_animated_background.gif" > -->
+		<style>
+		/* This menu is built from mobile up */
+		 Comic Sans MS, cursive,
+		/* general page styling */
+			body {  
+				background-color: black; 
+				font-family:  Comic Sans MS, cursive, sans-serif; 
+				font-size: 1.125em; 
+				line-height: 0.9em; 
+			}
+		 	
+		 	audio {   
+			    width:160px;
+					height: 50px;
+		  }
+			.header { 
+				width:100%; 
+				border-bottom: 1px solid #ccc; 
+				background-color: #ccc; 
+				margin-bottom: 2em; 
+			}
+			.footer {
+				font-size: 1.1em;
+				padding: 0px;
+			}
+			#content { 
+				width: auto; 
+				max-width: 960px; 
+				margin: auto; 
+				padding: 20px; 
+			}
+
+			/* Menu styles for non-mobile version */
+			.nav ul { 
+				display: none; 
+				list-style: none; 
+				padding: 0px; 
+				margin: 0px; 
+				font-weight: bold; 
+				text-align: center; 
+			}
+
+			.nav ul li {
+				display: inline-block;
+				text-align: left;
+				font-family: "Comic Sans MS", cursive;
+				font-size: 20px;
+			  padding-left: 10px; 
+			}
+
+			.nav ul li a { 
+				display: block; 
+				padding: 15px 15px; 
+				text-decoration: none; 
+				color: #fff; 
+			}
+
+			.nav ul li a:hover {
+/*				background-color: blue;*/
+				font-family: "Comic Sans MS", cursive;
+				font-size: 20px;
+			}
+
+			/* rule for button on mobile version */
+			.anchor-link { 
+				display: inline-block; 
+				text-align: center; 
+				padding: 10px 15px; 
+				color: #fff; 
+				background-color: #00F; 
+				text-decoration: none; 
+				margin: 2px; float: right; 
+			}
+			/* rule for button on mobile version */
+			.anchor-link { 
+				display: inline-block; 
+				text-align: center; 
+				padding: 10px 15px; 
+				color: #fff; 
+				background-color: #00F; 
+				text-decoration: none; 
+				margin: 2px; float: right; 
+			}
+
+			a.current {
+				color:white;
+			  outline: 1px solid #fff;
+			  border-radius: 4px;
+				padding: 0.4em;
+				margin-right: 0.9em;
+				display:block;
+			}
+
+			/* The media query for larger devices */
+			@media all and (min-width:768px) {
+				/* for display of non-mobile menu */
+/*				.nav ul { 
+					display: block; 
+					padding-left: 150px; 
+				}
+*/				/* hides menu button at top of screen */
+				.anchor-link { 
+					display: none; 
+				}
+				/* hides menu in footer */
+				#mobile-nav { 
+					display: none; 
+				}
+
+				img.jake 	{
+		    	float: left;
+					border: 1px solid blue;
+/*					margin-left: 6.5em;	*/
+				}
+			  
+				.copyrighte3 {
+					float: left;
+					border: 20px solid blue;
+					margin-left: 7.0em;
+				  /* movesthe text above the windoq*/
+				}
+						
+				.copyrighte4 {
+					float: left;
+					color:white;
+					padding-bottom:20px;
+					margin-left: 7.0em;
+				  /* movesthe text above the windoq*/
+				}
+					   
+				a:link, 
+				a:visited {
+				  color: white;
+				  text-decoration: none; 
+				}
+
+				a:hover {
+				   color:white;
+				  font-family: "Comic Sans MS", cursive;
+				}
+						
+				.page4	{
+			    float: left;
+					margin-left: 20.0em;	
+				}
+			}
+		</style>
+
+
+
+</head>
+
+<body>
+<a id="top"></a>
+<div id="wrapper">
+  <div id="header">
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>  	
+  	<!-- <a class="anchor-link" href="#mobile-nav">Menu</a> -->
+	     <div id="topnav">
+	       <nav class="nav"> 
+	        <ul>
+	            <li>
+	                <a href="http://www.jakesalienadventures.com">Start</a>        
+	            </li>
+	            <li>
+	                <a href="jake4.html">Read</a>       
+	            </li>
+	            <li>
+	                <a href="games.html">Games</a>        
+	            </li>
+	            <li>
+	                <a class="current" href="act3.html">Activites</a>
+	            </li>
+	            <li>
+	                <a href="http://www.jakesalienadventures.com/admin/?page_id=74">Blog</a>
+	            </li>
+	            <li>
+	                <a href="http://www.jakesalienadventures.com/admin/?page_id=27">Products</a>        
+	            </li>
+	            <li>
+	                <a href="http://www.jakesalienadventures.com/admin/contact-us/">Contact</a>        
+	            </li>
+	        </ul>
+	    	</nav>
+	    </div>
+  </div>
+
+  <div id="nav2">
+    <ul>
+       <li>
+       		<a class="current">Colouring</a>
+       	</li>
+	    	<li>
+	    		<a href="act.html">Puzzle</a>
+	    	</li>
+    </ul>
+  </div>
+
+  <div id="main" class="puzzle--main">
+  		<p class="copyright--e4">These pages are free to download</p>
+  						<!-- <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/network-gateway.png" alt="network-gateway"/> -->
+     	<!-- <center><span class="copyrighte4">These pages are free to download </span></center> <br>	 -->
+  		<div class="dl-image--container">
+				<img class="jake" src="../jk/site.copy/winj.jpg" alt="events " /> 
+				<p>
+					<input type="button" value="Download Now" onclick="window.location.href='win.pdf'"/>
+				</p>
+  		</div>
+  		<div class="dl-image--container">
+	 			<img class="jake" src="../jk/site.copy/world.jpg" alt="events" /> 
+				<p>
+					<input type="button" value="Download Now" onclick="window.location.href='world.pdf'"/>
+				</p>
+  		</div>  		
+  		<div class="dl-image--container">
+	 			<img class="jake" src="../jk/site.copy/actwoo.jpg" alt="events" /> 
+	 			<p>
+	 				<input type="button" value="Download Now" onclick="window.location.href='actwoo.pdf'"/>
+	 			</p>
+  		</div>  		
+  		<div class="dl-image--container">
+	  		<img class="jake" src="../jk/site.copy/home.jpg" alt="events" /> 
+	 			<p>
+	 				<input type="button" value="Download Now" onclick="window.location.href='sat.pdf'"/>
+	 			</p>
+  		</div>  		
+  		<div class="dl-image--container">
+	  		<img class="jake" src="../jk/site.copy/sat.jpg" alt="events" /> 
+	 			<p>
+	 				<input type="button" value="Download Now" onclick="window.location.href='woo-3.1.pdf'"/>
+	 			</p>
+  		</div>  		
+  		<div class="dl-image--container">
+	  		<img class="jake" src="../jk/site.copy/woo-3.jpg" alt="events" /> 
+	 			<p>
+	 				<input type="button" value="Download Now" onclick="window.location.href='woo-3.1.pdf'"/>
+	 			</p>
+  		</div>
+ 	</div>
+   
+  </div>
+  <div id="footer">
+    <footer class="footer">
+      <nav id="mobile-nav"> 
+	      <ul>
+          <li>
+              <a href="http://www.jakesalienadventures.com" class="middle">Start</a>        
+          </li>
+					<li>
+	          <a href="jake4.html" class="middle">Read</a>
+			    </li>     
+				  <li>
+	          <a href="games.html" class="middle">Games</a>
+	        </li>
+				  <li>
+	          <a href="act.html" class="middle">Activites</a>
+	        </li>
+	        <li>
+	          <a href="http://www.jakesalienadventures.com/admin/?page_id=74" class="middle">Blog</a>
+	        </li>
+				  <li>
+			      <a href="http://www.jakesalienadventures.com/index.php?route=product/category&amp;path=37" class="middle">Products</a>
+				  </li>
+				  <li>
+				  	<a href="http://www.jakesalienadventures.com/admin/contact-us/" class="middle">Contact</a>
+	        </li>
+				</ul>
+	    </nav>
+ 			<span class="copyright">
+	      <img src="http://www.jakesalienadventures.com/images/fa.jpg" width="40" height="30" />
+	      &#169; Copyright: Jake's Alien adventures 2006-2024
+	      <a class="jake8" href="https://www.facebook.com/profile.php?id=100008844106645"></a>
+     	</span>	    
+		</footer>
+	</div>
+	<div class="img--click-overlay">
+		<div class="img--ovl-container">
+			<img src="../jk/site.copy/woo-3.jpg">
+		</div>
+	</div>
+</div>
+
+		<script type="text/javascript">
+			let puzzleImages = document.querySelectorAll('.dl-image--container img');
+			let imageOverlay = document.querySelector('.img--click-overlay');
+			puzzleImages.forEach((img) => {
+				// console.log(imgSrc);
+				img.addEventListener('click', function() {
+					console.log(imageOverlay);
+					let imgSrc = img.src;
+					let ovlImage = imageOverlay.querySelector('img');
+					ovlImage.src = imgSrc;
+					imageOverlay.classList.add('showing');
+					// let imgOverlay = document.createElement('div');
+					// let ovlImage = document.createElement('img');
+					// ovlImage.src = imgSrc;
+					// imgOverlay.classList.add('showing');
+				});
+			});
+		</script>
+</body>
+</html>
