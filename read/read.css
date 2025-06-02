@@ -1,0 +1,243 @@
+
+@import url('https://api.fonts.coollabs.io/css2?family=Geo&display=swap');
+
+:root {
+  --tooltip-background: #444850;
+  --gap: 50px;
+  --cubic: cubic-bezier(0.91, 0.08, 0.16, 0.76);
+}
+
+main {
+  position: relative;
+  max-width: 380px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  margin-block-start: 7.5rem;
+}
+
+main:has(p) {
+  align-items: center;
+  justify-content: center;      
+}
+
+main p {
+    font-family: 'Geo';
+    font-size: clamp(0.975rem, -0.675rem + 5.333333vw, 1.5rem);
+    line-height: 1.2;
+    width: 70%;
+    color: #c0c0c0;
+    align-self: center;
+}
+
+.img--cont {
+  flex: 1 1 50%;
+  overflow: hidden;
+}
+
+.img--cont img {
+  max-width: 100%;
+  height: auto;
+}
+
+.img--cont img.img--scaled {
+  transform: scale(1.02) translate(0.15rem, 0.15rem);
+}
+
+main .nav--buttons {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+/*   top: 50%; */
+  top: 25%;
+  transform: translateY(-50%);
+}
+
+.nav-btn--wrap {
+  cursor: pointer;
+}
+
+.nav-btn--wrap svg {
+  fill: rgba(255, 255, 255, .4);
+  transition: all 0.4s ease-in-out;
+}
+
+.nav-btn--wrap:hover svg {
+  fill: rgba(255, 255, 255, 1);
+}
+.nav-btn--wrap svg.btn--dark {
+  fill: rgba(0, 0, 0, .6);  
+}
+
+.nav-btn--wrap:hover svg.btn--dark {
+  fill: rgba(0, 0, 0, 1);
+}
+
+.media-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.media-container video {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+@media (min-width: 460px) {
+  main {
+    max-width: 690px;
+    flex-direction: row;
+/*    margin-block-start: 0;    */
+  }
+  main .nav--buttons {
+    top: 50%;
+  }
+}
+
+.hamburger {
+  position: relative;
+  flex: 0 0 28px;
+  display: none;
+  cursor: pointer;
+/*   margin-left: auto; */
+  z-index: 1;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    float: right;
+    margin-right: .25rem;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+ 
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+ 
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  /*
+ 
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  */
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip::before {
+  content: attr(data-tooltip);
+  width: 300px;
+  position: absolute;
+  bottom: 20px;
+  left: -50px;
+  background-color: var(--tooltip-background);
+  padding: 10px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 4px;
+  line-height: 1.5;
+  opacity: 0;
+  visibility: hidden;
+/*  transition: opacity 0.2s var(--cubic), bottom 0.2s var(--cubic), visibility 0s 0.4s;*/
+  transition: opacity 0.4s var(--cubic), bottom 0.4s var(--cubic), visibility 0s 0.6s;
+}
+ 
+.tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  left: 93px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid var(--tooltip-background);
+  opacity: 0;
+  visibility: hidden;
+/*  transition: opacity 0.2s var(--cubic), bottom 0.2s var(--cubic), visibility 0s 0.4s;*/
+  transition: opacity 0.4s var(--cubic), bottom 0.4s var(--cubic), visibility 0s 0.6s;
+}
+
+.tooltip:hover::before {
+  opacity: 1;
+  visibility: visible;
+  bottom: 40px;
+  transition: opacity 0.2s var(--cubic), bottom 0.2s var(--cubic), visibility 0s 0s;
+}
+   
+.tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
+  bottom: 34px;
+  transition: opacity 0.2s var(--cubic), bottom 0.2s var(--cubic), visibility 0s 0s;
+}
+a.middle
+{
+    position: relative;
+    font-family: 'Geo';
+    font-size: 1.5rem;
+}
+
+a.middle:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.8s ease-in-out;
+}
+
+a.middle:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+#mobile-nav.showing {
+    transform: translate3d(0, 0, 0);
+}
+
+
+@keyframes slidein {
+  0%,
+  100% {
+    background-position: 20% 0%;
+    background-size: 3400px;
+  }
+  50% {
+    background-position: 100% 0%;
+    background-size: 2400px;
+  }
+}
