@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Alien Adventures - Clean Version</title>
+        <!--<link href="css/main.css" rel="stylesheet" type="text/css">-->
+        <link href="css/mediaquery.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://use.typekit.net/jww6zhp.css">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <script type="text/javascript" src="./app.js" defer></script>
+        <link rel="stylesheet" href="./read.css" />
+  <style>
+    /* This menu is built from mobile up */
+     Comic Sans MS, cursive,
+    /* general page styling */
+    body {  
+        background-color: black;
+        background: url('https://ik.imagekit.io/ghow2otb3rc/Projects/SoM/cdn/96337246-f14d4580-1085-11eb-8793-a86d929e034d_xLVdBIAQK.jpg');
+        font-family:  Comic Sans MS, cursive, sans-serif; font-size: 1.125em;
+        line-height: 0.3em;
+/*        background-repeat: repeat;*/
+/*        animation: slidein 360s forwards infinite alternate;*/
+    }
+        
+    #sidebar {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        top: 140px;
+        /*right: 40px;
+        height: 30px;*/
+        color: #c0c0c0;
+    }
+    audio {
+        /* position: absolute; */
+        right: 200px;
+        width: 160px;
+        width: 200px;
+        height: 30px;
+        left: 30%;
+        /*transform: scale(-0.75, -1);*/
+       
+        /* Equal to scaleX(2) scaleY(0.5) */
+/*        transform: scale(0.5, 1);*/
+        transform-origin: left;
+        transition: transform 0.5s ease-in-out
+    }
+        
+    audio:hover {
+        /* transform: scale(0.75, 1);  Equal to scaleX(2) scaleY(0.5)     */
+    }
+    
+    @media (max-width: 768px) {
+        #sidebar {
+            top: 100px;
+        }
+    }
+        
+    #sidebar h4 {
+        width: 40ch;
+    }
+    #leftnavcol {
+        width: 20%; 
+        float: left;
+        border-right: 2px dashed #999999;
+        margin-right: 1.0em;
+        height: 1390px;
+    }
+    .header { 
+        width:100%;
+        border-bottom: 1px solid #ccc;
+        background-color: #ccc;
+        margin-bottom: 2em; 
+    }
+    .footer {
+        font-size: 1.1em;
+        padding: 0px;
+    }
+    #content { width: auto; max-width: 990px; margin: auto; padding: 20px; }
+
+    /* Menu styles for non-mobile version */
+    /*.nav ul { display: none; list-style: none; padding: 0px; margin: 0px; font-weight: bold; text-align: center; }
+    .nav ul li {
+        display: inline-block;
+        text-align: left;
+        font-family: "Comic Sans MS", cursive;
+        color: firebrick;
+        font-size: 20px;
+        padding-left: 10px;
+
+    }
+    .nav ul li a { display: block; padding: 15px 10px; text-decoration: none; color: #fff; }
+    .nav ul li a:hover {
+        background-color: blue;
+        font-family: "Comic Sans MS", cursive;
+        font-size: 24px;*/
+    }
+
+    /* rule for button on mobile version */
+    .anchor-link { 
+        display: inline-block; 
+        text-align: center; 
+        padding: 10px 15px; 
+        color: #fff;
+        background-color: #00F;
+        text-decoration: none;
+        margin: 2px; float: right;
+        display: none
+    }
+
+    /* Styles for menu in footer */
+    #mobile-nav { 
+        position: fixed;
+        display: grid;
+        place-items: center;
+        /*
+        position: fixed;
+        inset: 10% 0 0 ;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .8);
+        transform: translate3d(-10%, 0, 0);
+        */
+        inset: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .8);
+        transform: translate3d(100%, 0, 0);
+        transition: transform 0.6s ease-in-out;
+    }
+    #mobile-nav ul {
+        list-style: none;
+        width: 80%;
+        margin: 0px;
+        padding: 0px;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+    #mobile-nav ul li { 
+        list-style: none;
+        text-align: center;         
+        /*font-family: 'Geo';*/
+        text-transform: uppercase;
+    }
+    #mobile-nav ul li a {
+        display: block;
+        padding: 20px 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        text-decoration: none;
+        color: #fff; 
+        transition: color 0.6s ease-in-out;
+    }
+    #mobile-nav ul li a:hover { 
+        /* background-color: blue; */
+        color: cyan; 
+    }
+    .copyright {
+/*        position: fixed;
+        bottom: 10px; */
+        display: inline-flex;
+        font-family: 'Geo';
+        font-size: 1rem;
+        line-height: 0.9;
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+    .copyright img {
+        order: -1;
+    }
+
+
+    /* The media query for larger devices */
+    @media all and (min-width:768px)
+    {
+    /* for display of non-mobile menu */
+    .nav ul { display: block; padding-left: 0px; }
+    /* hides menu button at top of screen */
+    .anchor-link { display: none; }
+    /* hides menu in footer */
+    #mobile-nav { display: none; }
+
+
+    }
+    </style>
+    </head>
+
+        <body id="wrapper">
+          <div id="header">
+                <div class="hamburger">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+              
+              <!-- <a class="anchor-link" href="#mobile-nav">Menu</a> -->
+               <div id="topnav">
+                 <nav class="nav">
+                    <div class="highlighter"></div>
+                    <ul>
+                        <li class="nav-item">
+                            <a href="jakes2.html">Start</a>        
+                        </li>
+                        <li class="nav-item">
+                            <a href="games.html">Games</a>       
+                        </li>
+                        <li class="nav-item">
+                            <a href="act.html">Activites</a>        
+                        </li>
+                        <li class="nav-item">
+                            <a href="http://www.jakesalienadventures.com/admin/?page_id=27">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="http://www.jakesalienadventures.com/admin/?page_id=74">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                         <a href=" https://www.jakesalienadventures.com/schoolvisit.html">School Visit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="http://www.jakesalienadventures.com/admin/contact-us/">Contact</a>        
+                        </li>                    
+                    </ul>
+              </nav>        
+            </div>
+          </div>
+          <div id="nav">
+            <!-- Change container element type to div -->
+<!--             <div class="img--cont"> 
+                <img class="jake6"  src="http://netanimations.net/stars_33.gif" width="100&quot;" height="100" alt="jake"/>
+            </div>
+          </div>
+ -->          <!--
+          <div id="main">
+                <img class="page3"  src="http://www.jakesalienadventures.com/n.jpg" width="320" height="489" alt="jake"/>
+                <img class="p5" src="http://www.jakesalienadventures.com/p5.jpg" width="320" height="489" alt="jake"/>
+          </div>
+          -->
+            <main>
+            <div class="img--cont">
+              <img src="https://www.jakesalienadventures.com/bed.jpg" alt="">
+            </div>
+            <div class="img--cont">
+              <img src="https://www.jakesalienadventures.com/bed2.jpg" class="img--scaled" alt="">
+            </div>
+            <div class="nav--buttons">
+              <div class="nav-btn--wrap">
+                <a href="http://www.jakesalienadventures.com/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm5 11h-5v4l-5-5 5-5v4h5v2z"></path>
+                    </svg>
+                </a>
+              </div>
+              <div class="nav-btn--wrap">
+                <a href="http://www.jakesalienadventures.com/jake5.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 15v-4H7v-2h5V7l5 5-5 5z"></path>
+                    </svg>
+                </a>
+              </div>
+            </div>
+            </main>
+            
+            <div id="sidebar">
+                <div class="media--player tooltip" data-tooltip="If you cannot hear the sound, your computer or browser doesn't support the sound format.Or, you have your speakers turned off">
+                    <audio controls autoplay>
+                        <source src="dan1.mp3" type="audio/mpeg">
+                        <source src="dan1.ogg" type="audio/ogg">
+                        <embed type="video/mpeg" height="50" width="10" src="dan1.mpeg" title="Narration">
+                    </audio>
+                </div>
+                <!-- <h4>If you cannot hear the sound, your computer or browser doesn't support the sound format.Or, you have your speakers turned off</h4> -->
+            </div>
+
+    <div id="footer">
+
+        <footer class="footer">
+
+            <nav id="mobile-nav"> 
+                <ul>
+                    <li>
+                        <a href="jakes2.html" class="middle">Start</a>
+                    </li>
+                    <li>
+                        <a href="http://www.jakesalienadventures.com" class="middle">Back</a>                        
+                    </li>
+                    <li>
+                        <a href="jake5.html" class="middle">Forward</a>
+                    </li>
+                    <li>
+                        <a href="games.html" class="middle">Games</a>
+                    </li>
+                    <li>
+                        <a href="act.html" class="middle">Activites</a>
+                    </li>
+                    <li>
+                        <a href="http://www.jakesalienadventures.com/admin/?page_id=27" class="middle">Products</a>
+                    </li>
+                    <li>
+                        <a href="http://www.jakesalienadventures.com/admin/?page_id=74" class="middle">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+            <span class="copyright">
+                    <a href="https://www.facebook.com/profile.php?id=100008844106645" target="_blank"><img src="http://www.jakesalienadventures.com/images/fa.jpg" width="40" height="30"></a>
+                    <a href="https://www.instagram.com/@noelgordon251/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@noelgordon251/" target="_blank">
+                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg fill="#fff" width="20" height="20" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><title>TikTok icon</title><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                        </svg>                        
+                    </a>
+                    
+                    <!-- <img src="http://www.jakesalienadventures.com/images/fa.jpg" width="40" height="30"> -->
+                    © Copyright: Jake's Alien adventures 2006-2024<a href="https://www.facebook.com/profile.php?id=100008844106645">
+                    </a> 
+                </span>         
+        </footer>
+    </div>
+    </body>
+</html>
