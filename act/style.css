@@ -1,3 +1,4 @@
+
 @import url('https://api.fonts.coollabs.io/css2?family=Geo&display=swap');
 
 :root {
@@ -58,7 +59,11 @@ input[type='button'] {
 /* Menu styles for non-mobile version */
 #topnav nav {
   position: relative;
+  position: relative;
+  --mgap: 2rem;
+  width: min(100% - var(--mgap), 700px);    
   padding-block: .675rem;
+  margin: 0 auto;
 /*  outline: 1px solid firebrick; */
 }
 
@@ -68,6 +73,10 @@ input[type='button'] {
   list-style: none;
   justify-content: center;
   gap: .5rem;
+  background-color: hsl(43.8, 0%, 9.3%);
+  border: 1px solid  hsla(43.8, 0%, 75.3%, 0.3);
+  border-radius: .5em;
+/*  padding-block: 4px;*/
 /*   outline: 1px solid firebrick; */
 }
 
@@ -75,6 +84,7 @@ input[type='button'] {
   outline: 1px solid hlsa(0, 0%, 0%, 0.1);
   border-radius: 4px;
 }
+
 
 #topnav nav ul li a {
   display: inline-block;
@@ -479,9 +489,32 @@ div.showing::after {
   animation: showOverlay .5s ease-in-out forwards;
 }
 
+.img--click-overlay svg {
+  box-sizing: content-box;
+  position: absolute;
+  right: 24px;
+  top: 8px;
+  cursor: pointer;
+  padding: 5px;
+}
+
 @keyframes showOverlay {
   to {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+.highlighter {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 70%;
+    border-radius: 4px;
+    background: hsl(43.8, 0%, 18.3%);
+    outline: 1px solid #c0c0c0;
+    outline: 1px solid hsla(43.8, 0%, 75.3%, 0.7);
+    transition: 0.3s ease;
+    transition-property: width, transform, opacity;
+    opacity: 0;
 }
