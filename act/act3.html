@@ -173,7 +173,8 @@
     </div>  	
   	<!-- <a class="anchor-link" href="#mobile-nav">Menu</a> -->
 	     <div id="topnav">
-	       <nav class="nav"> 
+	       <nav class="nav">
+	       	<div class="highlighter"></div>
 	        <ul>
 	            <li>
 	                <a href="http://www.jakesalienadventures.com">Start</a>        
@@ -217,7 +218,7 @@
   						<!-- <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/network-gateway.png" alt="network-gateway"/> -->
      	<!-- <center><span class="copyrighte4">These pages are free to download </span></center> <br>	 -->
   		<div class="dl-image--container">
-				<img class="jake" src="../jk/site.copy/winj.jpg" alt="events " /> 
+				<img class="jake" src="https://www.jakesalienadventures.com/winj.jpg" alt="events " /> 
 				<p>
 					<input type="button" value="Download Now" onclick="window.location.href='win.pdf'"/>
 				</p>
@@ -292,6 +293,9 @@
 	<div class="img--click-overlay">
 		<div class="img--ovl-container">
 			<img src="../jk/site.copy/woo-3.jpg">
+			<svg class="close" xmlns="https://www.w3.org/2000/svg" fill="none" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoind="round" d="M6 18 18 6M6 6l12 12"></path>
+			</svg>
 		</div>
 	</div>
 </div>
@@ -299,6 +303,8 @@
 		<script type="text/javascript">
 			let puzzleImages = document.querySelectorAll('.dl-image--container img');
 			let imageOverlay = document.querySelector('.img--click-overlay');
+			let closeBtn = document.querySelector('.img--click-overlay svg');
+
 			puzzleImages.forEach((img) => {
 				// console.log(imgSrc);
 				img.addEventListener('click', function() {
@@ -312,6 +318,10 @@
 					// ovlImage.src = imgSrc;
 					// imgOverlay.classList.add('showing');
 				});
+			});
+
+			closeBtn.addEventListener('click', function() {
+				imageOverlay.classList.remove('showing');
 			});
 		</script>
 </body>
