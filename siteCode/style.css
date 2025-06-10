@@ -18,10 +18,11 @@
 }
 /* general page styling */
 body {  
-    background-color: black; 
+    background: #000 url(https://ik.imagekit.io/ghow2otb3rc/Projects/SoM/cdn/2_animated_background__R7TIo60UM.webp);
     font-family:  Comic Sans MS, cursive, sans-serif; 
     font-size: 1.125em; 
     line-height: 0.3em; 
+    background-repeat: repeat;
 }
 
 .header { 
@@ -49,24 +50,55 @@ body {
     padding: 20px; 
 }
 
+#topnav {
+  position: relative;
+  --mgap: 2rem;
+  width: min(100% - var(--mgap), 700px);
+  margin: 0 auto;
+/*  padding-inline: 10rem;*/
+  padding-block: .675rem;
+}
+
 /* Menu styles for non-mobile version */
 #topnav nav {
-    position: relative;
-    padding-block: .675rem;
-   /*outline: 1px solid firebrick; */
+  position: relative;
+/*  padding-block: .675rem;*/
+/*  outline: 1px solid firebrick; */
 }
 
 #topnav nav ul {
-  /*display: flex;*/
-    display: none;
+  display: none;
   list-style: none;
   justify-content: center;
   gap: .5rem;
-/*   outline: 1px solid firebrick; */
+/*  background-color: hsla(43.8, 0%, 28.9%, 0.8);*/
+  background-color: #efeeec0f;
+  background-color: hsl(43.8, 0%, 9.3%);
+  border: 1px solid  hsla(43.8, 0%, 75.3%, 0.3);
+  border-radius: .5em;
+  padding-block: 4px;  
+/*   outline: 1px solid firebrick;  efeeec00*/
+}
+
+#topnav nav ul li {
+  position: relative;
+/*  background-color: #0000;
+  border: 1px solid #efeeec00;
+  border: 1px solid #c0c0c0;*/
+}
+
+#topnav nav ul li.active {
+  background-color: #0000;
+  background-color: hsl(43.8  , 0%, 16.7%);
+  border: 1px solid #efeeec00;
+/*  border: 1px solid #c0c0c0;  */
+  border-radius: .25rem;  
 }
 
 #topnav nav ul li:nth-of-type(1) {
-  outline: 1px solid #fff;
+/*  outline: 1px solid hlsa(0, 0%, 0%, 0.1);
+  border: 1px solid hlsa(0, 0%, 0%, 0.1);*/
+/*  outline: 1px solid #fff;*/
   border-radius: 4px;
 }
 
@@ -75,9 +107,10 @@ body {
   font-family: 'Geo';
   font-weight: 700;
   color: #fff;
-  text-decoration: none;
+/*  color: currentColor;*/
   padding: 12px 6px;
   text-transform: uppercase;
+  text-decoration: none;
   letter-spacing: .045rem;
     transition: color .3s ease-in-out;
 }
@@ -88,16 +121,38 @@ body {
     /*font-size: 24px;*/
 }
 
+                 
+#nav2{
+  position: relative;
+  width: 100%;
+/*          padding-left: 40px;
+  margin-left: 7.0em; */          
+  display: flex;
+  justify-content: center;
+  margin-block: 2rem; 
+}
+
+#nav2 ul li {
+  display: inline-block;
+}
+
+#nav2 ul li a {
+   color: #fff;
+   text-decoration: none;
+}
+
 #main {
   position: relative;
-  max-width: 90%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 4rem;
+  padding-block-start: 0;
 }
+
 /* Styles for menu in footer */
 #mobile-nav { 
     /*display: block; */
@@ -145,6 +200,30 @@ body {
     color: cyan; 
 }
 
+.copyright {
+  position: fixed;
+  bottom: 10px;
+  display: inline-flex;
+  font-family: 'Geo';
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  line-height: .9;
+}
+
+.copyright img {
+  order: -1;
+}
+
+@media (width >= 420px) {
+  .copyright {
+    position: relative;
+    line-height: .9;
+  }
+}
+
 /* The media query for larger devices */
 @media all and (min-width: 768px) {
   /* for display of non-mobile menu */
@@ -159,6 +238,18 @@ body {
   #mobile-nav { 
     display: none; 
   }
+
+/*  #main {
+    position: relative;
+    max-width: 40%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    padding-block-start: 4rem;
+  } */ 
 }
 /*
 
@@ -181,6 +272,7 @@ main p {
 
 .main--img-wrap {
   width: 100%;
+  max-width: 640px;
   /*margin: 0 auto;*/
   margin-block-start: 3rem;
   overflow: hidden;
@@ -193,6 +285,18 @@ main p {
   height: auto;
   box-shadow: 1px 6px 12px rgba(250, 250, 250, .55);
 }
+
+
+@media (min-width: 768px) {
+  main--img-wrap {
+    max-width: 800px;
+  }
+}
+
+frame {
+  clear: left;
+}
+
 a.middle
 {
     position: relative;
@@ -275,4 +379,19 @@ a.middle:hover:before {
   height: auto;
   display: block;
   opacity: .8;
+}
+
+.highlighter {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  /* width will be dynamic */
+  height: 70%;
+  border-radius: 4px;
+  background: hsl(43.8, 0%, 18.3%);
+  outline: 1px solid #c0c0c0;
+  outline: 1px solid hsla(43.8, 0%, 75.3%, 0.7);
+  transition: 0.3s ease;
+  transition-property: width, transform, opacity;
+  opacity: 0;
 }
